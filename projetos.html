@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos & Arsenal | t1lt45</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>t1lt45</h1>
+        <p>Security Researcher</p>
+        <nav>
+            <a href="index.html">>cd ~</a>
+            <a href="sobre.html">>Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Arsenal & Ferramentas</h2>
+        <p>Aplicações, utilitários e PoCs (Proof of Concepts) desenvolvidos para automatizar rotinas, apoiar times internos e explorar vetores de ataque. De scripts simples a aplicações web completas.</p>
+
+        <!-- CONTAINER DO GRID (Divide a tela em colunas responsivas) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; align-items: start;">
+
+            <!-- COLUNA 1: Red Team (Esquerda) -->
+            <section class="about-section" style="margin-top: 0;">
+                <h3 style="margin-top: 0;">Offensive Security & Red Team</h3>
+                <ul class="post-list">
+                    
+                    <!-- Card de Projeto Futuro -->
+                    <li class="post-item" style="background: transparent; padding: 25px; border-radius: 8px; border-left: 4px dashed var(--accent-red); margin-bottom: 20px; opacity: 0.7;">
+                        <h4 style="margin: 0 0 5px 0; color: var(--accent-red); font-size: 1.2em;">
+                            [ Em Desenvolvimento ]
+                        </h4>
+                        <p style="margin-bottom: 0; font-size: 0.9em;">
+                            Ferramentas de automação de payload e utilitários de Engenharia Reversa serão documentados e disponibilizados neste diretório em breve.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- COLUNA 2: Blue Team (Direita) -->
+            <section class="about-section" style="margin-top: 0;">
+                <h3 style="margin-top: 0;">Defesa & Incident Response</h3>
+                <ul class="post-list">
+                    
+                    <!-- Card do Projeto: Blameless Postmortem -->
+                    <li class="post-item" style="background: var(--code-bg); padding: 25px; border-radius: 8px; border-left: 4px solid var(--accent-purple); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                        <h4 style="margin: 0 0 5px 0; color: var(--accent-purple); font-size: 1.2em;">
+                            🟪 Blameless Postmortem Builder 
+                            <span style="font-size: 0.6em; color: #888; font-family: monospace; vertical-align: middle;">[v1.0]</span>
+                        </h4>
+                        
+                        <p style="font-family: monospace; font-size: 0.85em; color: var(--accent-red); margin-top: 0; margin-bottom: 15px;">
+                            Stack: HTML, CSS, JS
+                        </p>
+                        
+                        <p style="font-size: 0.9em; margin-bottom: 20px;">
+                            Aplicação web para guiar equipes de tecnologia na construção de relatórios de incidentes focados em processos, não em culpar pessoas. Padroniza o fluxo de <i>Lessons Learned</i>.
+                        </p>
+                        
+                        <!-- Nav ajustada com Flexbox para não quebrar feio em colunas estreitas -->
+                        <nav style="font-size: 0.9em; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+                            <a href="apps/ir_handler/index.html" style="font-weight: bold; background: var(--accent-purple); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none;" target="_blank">Acessar ➔</a> 
+                            <a href="https://github.com/t1lt45/ir_handler" target="_blank">Ver Código</a>
+                        </nav>
+                    </li>
+
+                </ul>
+            </section>
+
+        </div> <!-- FIM DO CONTAINER GRID -->
+
+    </main>
+
+    <footer>
+        <p>© 2026 t1lt45.</p>
+    </footer>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | t1lt45</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav style="margin: 20px;"><a href="index.html"># cd ~</a></nav>
+
+    <header>
+        <h1># t1lt45</h1>
+        <p>Security Researcher</p>
+        <nav>
+            <a href="/index.html">cd ~</a>
+            <a href="sobre.html">>Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Alguns "frankenstein" compartilhados</h2>
+        <p>Aqui compartilho algumas ideias (em código/script) que me ajudaram ou ajudam.</p>
+        <br>
+
+        <section class="about-section">
+            <h3>Projetos</h3>
+            <ul class="post-list">
+                <li>🟪 IR Handler - Incident Response Toolkit: <a href="/assets/tools/ir_handler/index.html" target="_blank">Aplicação</a><a> | </a> <a href="https://github.com/t1lt45/ir_handler" target="_blank">Repositório</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 t1lt45.</p>
+    </footer>
+</body>
+</html> -->

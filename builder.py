@@ -30,11 +30,11 @@ def generate_blog():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | t1lt45</title>
-    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav style="margin: 20px;"><a href="../../index.html">← Voltar para a Home</a></nav>
+    <nav style="margin: 20px;"><a href="index.html">← Voltar para a Home</a></nav>
     <main><article>{content_html}</article></main>
     <footer><p>© 2026 t1lt45.</p></footer>
 </body>
