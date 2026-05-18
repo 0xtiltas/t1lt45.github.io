@@ -1,14 +1,15 @@
 /* ============================================================
-   t1lt45_ Security Lab - Universal Style
-   Foco: Legibilidade, Engenharia Reversa e Malware Analysis
+   0xtiltas_ Security Lab - Dark Theme
+   Foco: Legibilidade, Red Team e Malware Analysis
    ============================================================ */
 :root {
-    --bg-color: #f4f4f7;        /* Cinza gelo clarinho */
-    --text-color: #2d2d2d;      /* Cinza escuro para leitura */
-    --accent-purple: #6f42c1;   /* Roxo: Títulos e Identidade */
-    --accent-blue: #000000;     /* Azul: Links e Navegação */
-    --accent-red: #6f42c1;      /* Vermelho: RE, Malware e Alertas */
-    --code-bg: #ffffff;         /* Fundo branco para blocos de código */
+    --bg-color: #0a0a0a;        /* Preto profundo (Fundo Principal) */
+    --text-color: #d1d5db;      /* Branco suave/Cinza claro para leitura confortável */
+    --accent-purple: #b286fd;   /* Roxo vibrante para Títulos e Identidade */
+    --accent-link: #ffffff;     /* Branco puro para Links de Navegação */
+    --accent-red: #ff4757;      /* Vermelho Red Team para alertas e código */
+    --code-bg: #161616;         /* Fundo levemente mais claro para cards e código */
+    --border-color: #262626;    /* Linhas divisórias escuras e discretas */
 }
 
 body {
@@ -23,26 +24,27 @@ body {
 
 /* --- Cabeçalho e Navegação --- */
 header {
-    border-bottom: 3px solid var(--accent-purple);
+    border-bottom: 2px solid var(--accent-purple);
     margin-bottom: 40px;
     padding-bottom: 10px;
 }
 
 h1, h2, h3 { color: var(--accent-purple); }
 
-header h1 { margin: 0; font-size: 2.5em; }
-header p { margin: 5px 0 15px 0; color: #555; }
+header h1 { margin: 0; font-size: 2.5em; color: var(--accent-link); } /* Título principal em branco */
+header p { margin: 5px 0 15px 0; color: #9ca3af; } /* Subtítulo em cinza médio */
 
 nav a {
-    color: var(--accent-blue);
+    color: var(--accent-link);
     text-decoration: none;
     font-weight: 600;
     margin-right: 15px;
     font-size: 1.1em;
+    transition: color 0.2s ease-in-out;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--accent-red);
 }
 
@@ -50,9 +52,20 @@ nav a:hover {
 .post-list { list-style: none; padding: 0; }
 .post-item { margin-bottom: 25px; }
 .post-date {
-    color: #888;
+    color: #9ca3af;
     font-family: 'Cascadia Code', 'Fira Code', monospace;
     font-size: 0.9em;
+}
+
+/* Ajuste de Links dentro das listas */
+.post-list a {
+    color: var(--accent-purple);
+    text-decoration: none;
+    font-weight: 500;
+}
+.post-list a:hover {
+    color: var(--accent-red);
+    text-decoration: underline;
 }
 
 /* --- Conteúdo dos Artigos (Markdown/Notion) --- */
@@ -67,13 +80,14 @@ article {
     margin-top: 30px;
 }
 
-/* Imagens responsivas com borda sutil */
+/* Imagens responsivas com borda sutil adaptada ao escuro */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     margin: 20px 0;
+    opacity: 0.9; /* Reduz o brilho excessivo de imagens claras no dark mode */
 }
 
 /* --- Blocos de Código e Technical Feel --- */
@@ -81,23 +95,23 @@ pre {
     background: var(--code-bg);
     padding: 15px;
     overflow-x: auto;
-    border-left: 5px solid var(--accent-red); /* Borda indicando análise técnica */
+    border-left: 5px solid var(--accent-red);
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color); /* Adicionado para destacar do fundo preto */
 }
 
 code {
     font-family: "Cascadia Code", "Fira Code", "Courier New", monospace;
     font-size: 0.9em;
-    color: var(--accent-red); /* Código em destaque vermelho */
+    color: var(--accent-red);
 }
 
 /* --- Rodapé --- */
 footer {
     margin-top: 60px;
     padding-top: 20px;
-    border-top: 1px solid #e1e1e1;
+    border-top: 1px solid var(--border-color);
     font-size: 0.85em;
-    color: #777;
+    color: #6b7280;
     text-align: center;
 }
