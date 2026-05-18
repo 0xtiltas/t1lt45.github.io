@@ -3,492 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IR HANDLER v1.1 :: Full Suite</title>
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPCEtLSBGdW5kbyAtLT4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiMwZjExMWEiIHJ4PSIxMiIgLz4KICAKICA8IS0tIEVzY3VkbyAtLT4KICA8cGF0aCBkPSJNMzIgNTZDMzIgNTYgMTIgNDggMTIgMzJWMTZMMzIgOGwyMCA4djE2YzAgMTYtMjAgMjQtMjAgMjR6IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGZmOWQiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogIAogIDwhLS0gUmFkYXIgLyBNaXJhIC0tPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjgiIGZpbGw9IiMwMGZmOWQiIG9wYWNpdHk9IjAuNSIgLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI0IiBmaWxsPSIjMDBmZjlkIiAvPgogIDxsaW5lIHgxPSIzMiIgeTE9IjE4IiB4Mj0iMzIiIHkyPSIyNCIgc3Ryb2tlPSIjMDBmZjlkIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNDAiIHgyPSIzMiIgeTI9IjQ2IiBzdHJva2U9IiMwMGZmOWQiIHN0cm9rZS13aWR0aD0iMiIgLz4KICA8bGluZSB4MT0iMTgiIHkxPSIzMiIgeDI9IjI0IiB5Mj0iMzIiIHN0cm9rZT0iIzAwZmY5ZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI0MCIgeTE9IjMyIiB4Mj0iNDYiIHkyPSIzMiIgc3Ryb2tlPSIjMDBmZjlkIiBzdHJva2Utd2lkdGg9IjIiIC8+Cjwvc3ZnPg==">
+    <title>0xtiltas - IR Handler :: Suite</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMGEwYTBhIiByeD0iMTIiIC8+PHBhdGggZD0iTTMyIDU2QzMyIDU2IDEyIDQ4IDEyIDMyVjE2TDMyIDhsMjAgOHYxNmMwIDE2LTIwIDI0LTIwIDI0eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjI4NmZkIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI4IiBmaWxsPSIjYjI4NmZkIiBvcGFjaXR5PSIwLjUiIC8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iNCIgZmlsbD0iI2IyODZmZCIgLz48bGluZSB4MT0iMzIiIHkxPSIxOCIgeDI9IjMyIiB5Mj0iMjQiIHN0cm9rZT0iI2IyODZmZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPjxsaW5lIHgxPSIzMiIgeTE9IjQwIiB4Mj0iMzIiIHkyPSI0NiIgc3Ryb2tlPSIjYjI4NmZkIiBzdHJva2Utd2lkdGg9IjIiIC8+PGxpbmUgeDE9IjE4IiB5MT0iMzIiIHgyPSIyNCIgeTI9IjMyIiBzdHJva2U9IiNiMjg2ZmQiIHN0cm9rZS13aWR0aD0iMiIgLz48bGluZSB4MT0iNDAiIHkxPSIzMiIgeDI9IjQ2IiB5Mj0iMzIiIHN0cm9rZT0iI2IyODZmZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPjwvc3ZnPg==">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-    <style>
-        :root {
-            --bg-color: #0f111a;
-            --card-bg: #1a1d2d;
-            --text-main: #aab2c0;
-            --accent-primary: #00ff9d;
-            --accent-secondary: #00b8ff;
-            --accent-alert: #ff4757;
-            --border-color: #2f3542;
-            --font-mono: 'JetBrains Mono', 'Consolas', monospace;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-mono);
-            margin: 0;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        .container { max-width: 1400px; margin: 0 auto; }
-
-        /* --- Header --- */
-        header {
-            border-bottom: 2px solid var(--accent-primary);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        h1 { margin: 0; color: #fff; font-size: 24px; text-transform: uppercase; letter-spacing: 2px; }
-        
-        /* --- Grid Principal --- */
-        .layout-grid {
-            display: grid;
-            grid-template-columns: 280px 1fr 400px; /* Aumentei um pouco a area do report */
-            gap: 20px;
-            height: calc(100vh - 120px);
-        }
-
-        /* --- Coluna 1: Seletor --- */
-        .sidebar {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            overflow-y: auto;
-        }
-
-        .btn-add {
-            display: flex; align-items: center; width: 100%; padding: 12px; margin-bottom: 8px;
-            background: #252a40; color: #fff; border: 1px solid var(--border-color);
-            border-left: 4px solid transparent; text-align: left; cursor: pointer; transition: 0.2s;
-            font-family: var(--font-mono); font-size: 0.9em;
-        }
-
-        .btn-add:hover { background: #303652; border-left-color: var(--accent-secondary); padding-left: 15px; }
-        .btn-add .icon { width: 25px; font-size: 1.2em; display: inline-block; }
-
-        /* --- Coluna 2: Timeline --- */
-        .timeline-area {
-            overflow-y: auto; padding-right: 10px; display: flex; flex-direction: column; gap: 20px;
-        }
-
-        /* Card de Investigação */
-        .investigation-card {
-            background: var(--card-bg); border: 1px solid var(--border-color);
-            border-radius: 8px; animation: slideIn 0.3s ease-out; position: relative;
-        }
-
-        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-        .card-header {
-            background: #252a40; padding: 10px 15px; border-bottom: 1px solid var(--border-color);
-            border-radius: 8px 8px 0 0; display: flex; justify-content: space-between; align-items: center;
-        }
-
-        .step-badge {
-            background: #fff; color: #000; font-weight: bold; padding: 2px 8px;
-            border-radius: 4px; margin-right: 10px; font-size: 0.8em;
-        }
-
-        /* Botões de Ação do Card (Move Up/Down/Close) */
-        .card-actions { display: flex; gap: 10px; }
-        .card-btn { background: none; border: none; cursor: pointer; color: #666; font-size: 1.1em; transition: 0.2s; }
-        .card-btn:hover { color: #fff; }
-        .btn-close:hover { color: var(--accent-alert); }
-
-        .card-body { padding: 20px; }
-
-        /* Checkbox Items */
-        .checklist-item {
-            display: flex; align-items: flex-start; margin-bottom: 15px; padding: 10px;
-            border-radius: 6px; transition: 0.2s; border: 1px solid transparent;
-        }
-        .checklist-item:hover { background: #2f3542; border-color: #444; }
-        .checklist-item.checked { background: rgba(0, 255, 157, 0.05); border-color: rgba(0, 255, 157, 0.2); }
-        .checklist-item.checked strong { color: var(--accent-primary); }
-
-        input[type="checkbox"] { margin-right: 15px; transform: scale(1.3); accent-color: var(--accent-primary); margin-top: 3px; cursor: pointer; }
-
-        .cmd-box {
-            background: #000; padding: 10px; border-left: 3px solid #555; margin-top: 8px;
-            font-size: 0.85em; color: #dcdcdc; display: none; font-family: 'Consolas', monospace; word-break: break-all;
-        }
-        .tool-tag {
-            float: right; background: #111; color: var(--accent-secondary); font-size: 0.7em;
-            padding: 2px 6px; border: 1px solid #333; border-radius: 4px;
-        }
-        .checklist-item:hover .cmd-box, .checklist-item.checked .cmd-box { display: block; }
-        .checklist-item.checked .cmd-box { border-left-color: var(--accent-primary); }
-
-        /* Custom Evidence Area */
-        .custom-evidence-area {
-            margin-top: 15px; border-top: 1px dashed #333; padding-top: 15px;
-        }
-        .custom-input {
-            width: 100%; background: #0f111a; border: 1px solid #333; color: var(--accent-primary);
-            padding: 10px; font-family: var(--font-mono); font-size: 0.9em; resize: vertical; min-height: 60px;
-            box-sizing: border-box;
-        }
-        .custom-input:focus { outline: none; border-color: var(--accent-secondary); }
-
-        /* --- Coluna 3: Relatório --- */
-        .report-panel {
-            background: #000; border: 1px solid var(--border-color); border-radius: 8px;
-            display: flex; flex-direction: column;
-        }
-
-        .report-header-bar {
-            padding: 10px; border-bottom: 1px solid #333; color: #fff; font-weight: bold; font-size: 0.9em;
-            background: #111; border-radius: 8px 8px 0 0; display: flex; justify-content: space-between; align-items: center;
-        }
-
-        textarea#finalReport {
-            flex: 1; background: transparent; color: var(--accent-primary); border: none;
-            padding: 15px; resize: none; font-family: var(--font-mono); font-size: 12px; line-height: 1.5;
-        }
-        textarea#finalReport:focus { outline: none; }
-
-        .btn-group { display: flex; }
-        .btn-action {
-            flex: 1; border: none; padding: 15px; font-weight: bold; cursor: pointer;
-            font-family: var(--font-mono); transition: 0.3s; font-size: 0.9em;
-        }
-        .btn-copy { background: var(--accent-primary); color: #000; }
-        .btn-copy:hover { background: #00cc7a; }
-        
-        .btn-pdf { background: #e84118; color: #fff; }
-        .btn-pdf:hover { background: #c23616; }
-
-        .btn-reset { background: #2f3542; color: #fff; margin-left: 10px; border-radius: 4px; padding: 5px 10px; font-size: 0.8em; cursor: pointer; border: none;}
-        .btn-reset:hover { background: var(--accent-alert); }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f111a; }
-        ::-webkit-scrollbar-thumb { background: #2f3542; border-radius: 4px; }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
     <header>
         <div>
-            <h1>Incident Response Handler</h1>
-            <small style="color: var(--accent-secondary);">v1.1 // t1lt45</small>
+            <h1>0xtiltas - <span style="color: var(--accent-purple); font-weight: 300;">IR Handler</span></h1>
+            <p style="margin: 0; color: #9ca3af; font-size: 0.9em; font-family: var(--font-mono);">v1.2 // Incident Response Handler</p>
         </div>
         <div style="display: flex; gap: 10px; align-items: center;">
-            <button class="btn-reset" onclick="resetAll()">⚠️ RESETAR TUDO</button>
-            <span style="color: var(--accent-alert); font-weight: bold; border: 1px solid var(--accent-alert); padding: 5px 10px;">TLP:AMBER</span>
+            <button class="btn-reset" onclick="app.resetAll()">⚠️ RESETAR TUDO</button>
+            <span style="color: var(--accent-red); font-weight: bold; border: 1px solid var(--accent-red); padding: 5px 10px; border-radius: 3px; font-family: var(--font-mono); font-size: 0.85em;">TLP:AMBER</span>
         </div>
     </header>
 
     <div class="layout-grid">
-        
         <div class="sidebar">
-            <h3 style="color: #fff; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 14px;">+ ADICIONAR ETAPA</h3>
+            <h3>+ SUGERIR PLAYBOOK</h3>
+            <button class="btn-add" onclick="app.addCard('email')"><span class="icon">📧</span> E-mail / Phishing</button>
+            <button class="btn-add" onclick="app.addCard('doc')"><span class="icon">📄</span> Documento (Office/PDF)</button>
+            <button class="btn-add" onclick="app.addCard('script')"><span class="icon">📜</span> Script (PS1/JS/VBS)</button>
+            <button class="btn-add" onclick="app.addCard('exe')"><span class="icon">⚙️</span> Executável (EXE/DLL)</button>
             
-            <button class="btn-add" onclick="addCard('email')"><span class="icon">📧</span> E-mail / Phishing</button>
-            <button class="btn-add" onclick="addCard('doc')"><span class="icon">📄</span> Documento (Office/PDF)</button>
-            <button class="btn-add" onclick="addCard('script')"><span class="icon">📜</span> Script (PS1/JS/VBS)</button>
-            <button class="btn-add" onclick="addCard('exe')"><span class="icon">⚙️</span> Executável (EXE/DLL)</button>
+            <div style="border-top: 1px solid var(--border-color); margin: 15px 0;"></div>
             
-            <div style="border-top: 1px solid #333; margin: 10px 0;"></div>
+            <button class="btn-add" onclick="app.addCard('triage_win')"><span class="icon">💻</span> Live Response (Win)</button>
+            <button class="btn-add" onclick="app.addCard('triage_lin')"><span class="icon">🐧</span> Live Response (Linux)</button>
             
-            <button class="btn-add" onclick="addCard('triage_win')"><span class="icon">💻</span> Live Response (Win)</button>
-            <button class="btn-add" onclick="addCard('triage_lin')"><span class="icon">🐧</span> Live Response (Linux)</button>
+            <div style="border-top: 1px solid var(--border-color); margin: 15px 0;"></div>
             
-            <div style="border-top: 1px solid #333; margin: 10px 0;"></div>
-            
-            <button class="btn-add" onclick="addCard('network')"><span class="icon">🌐</span> Rede (PCAP)</button>
-            <button class="btn-add" onclick="addCard('memory')"><span class="icon">🧠</span> Memória (Volatility)</button>
+            <button class="btn-add" onclick="app.addCard('network')"><span class="icon">🌐</span> Rede (PCAP)</button>
+            <button class="btn-add" onclick="app.addCard('memory')"><span class="icon">🧠</span> Memória (Volatility)</button>
         </div>
 
         <div class="timeline-area" id="timelineContainer">
-            <div style="text-align: center; margin-top: 100px; color: #444;" id="emptyMsg">
+            <div class="empty-state" id="emptyMsg">
                 <h2>Timeline Vazia</h2>
-                <p>Selecione um artefato à esquerda para iniciar a análise.</p>
+                <p>Selecione uma sugestão de playbook à esquerda para iniciar a investigação.</p>
             </div>
         </div>
 
         <div class="report-panel">
             <div class="report-header-bar">
-                <span>RELATÓRIO DE INCIDENTE (LIVE)</span>
-                <small id="stepCounterDisplay">0 Etapas</small>
+                <span>RELATÓRIO DE INVESTIGAÇÃO (SUGESTÕES)</span>
+                <small id="stepCounterDisplay" style="color: var(--accent-purple); font-family: var(--font-mono);">0 Sugestões</small>
             </div>
             <textarea id="finalReport" readonly></textarea>
             <div class="btn-group">
-                <button class="btn-action btn-pdf" onclick="generatePDF()">📄 EXPORTAR PDF</button>
-                <button class="btn-action btn-copy" onclick="copyReport()">📋 COPIAR TEXTO</button>
+                <button class="btn-action btn-copy" onclick="app.copyReport()">📋 COPIAR TEXTO</button>
+                <button class="btn-action btn-pdf" onclick="app.generatePDF()">📄 EXPORTAR PDF</button>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    // --- DATABASE ---
-    const database = {
-        triage_win: { title: "Live Response (Windows)", color: "#00a8ff", steps: [
-            { text: "Verificar Conexões Ativas", tool: "netstat", cmd: "netstat -ano | findstr ESTABLISHED" },
-            { text: "Processos Suspeitos", tool: "tasklist", cmd: "tasklist /v | findstr /i 'powershell cmd wscript'" },
-            { text: "Persistência (Run Keys)", tool: "reg query", cmd: "reg query HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" },
-            { text: "Tarefas Agendadas", tool: "schtasks", cmd: "schtasks /query /fo LIST /v | findstr /i 'TaskToRun'" }
-        ]},
-        triage_lin: { title: "Live Response (Linux/Web)", color: "#e84118", steps: [
-            { text: "Histórico de Logins", tool: "last", cmd: "cat /var/log/auth.log | grep -i 'accepted'" },
-            { text: "Processos (CPU)", tool: "top", cmd: "ps -auxww | grep -v '\\['" },
-            { text: "Arquivos Recentes (Web)", tool: "find", cmd: "find /var/www/html -type f -mtime -1" },
-            { text: "Conexões Reversas", tool: "ss", cmd: "ss -antp | grep ESTAB" }
-        ]},
-        network: { title: "Tráfego de Rede (PCAP)", color: "#9c88ff", steps: [
-            { text: "Conversas Longas (C2)", tool: "Wireshark", cmd: "Stats > Conversations > TCP (Sort by Duration)" },
-            { text: "Filtro Port Scan", tool: "Filter", cmd: "tcp.flags.syn==1 && tcp.flags.ack==0" },
-            { text: "Extração de Arquivos", tool: "Export", cmd: "File > Export Objects > HTTP/SMB" },
-            { text: "DNS Tunneling", tool: "Filter", cmd: "dns.qry.name.len > 50" }
-        ]},
-        memory: { title: "Dump de Memória (Volatility)", color: "#ff7979", steps: [
-            { text: "Listar Processos", tool: "pslist", cmd: "python3 vol.py -f dump.mem windows.pslist" },
-            { text: "Conexões de Rede", tool: "netscan", cmd: "python3 vol.py -f dump.mem windows.netscan" },
-            { text: "Injeção de Código", tool: "malfind", cmd: "python3 vol.py -f dump.mem windows.malfind" },
-            { text: "Extrair Binário", tool: "dumpfiles", cmd: "python3 vol.py -f dump.mem windows.dumpfiles --pid <PID>" }
-        ]},
-        exe: { title: "Executável (EXE/DLL)", color: "#fbc531", steps: [
-            { text: "Detectar Packer", tool: "DiE", cmd: "Verifique entropia > 7.0" },
-            { text: "Strings", tool: "Floss", cmd: "floss.exe malware.exe > strings.txt" },
-            { text: "Capabilities", tool: "Capa", cmd: "capa.exe malware.exe" },
-            { text: "Importações", tool: "PEStudio", cmd: "Check: VirtualAlloc, WriteProcessMemory" }
-        ]},
-        script: { title: "Scripts (PS1, JS, VBS)", color: "#4cd137", steps: [
-            { text: "Desofuscação Base64", tool: "CyberChef", cmd: "Recipe: From Base64 > Remove Null Bytes" },
-            { text: "Download Cradle", tool: "Manual", cmd: "Busque: IEX, Invoke-Expression, Net.WebClient" }
-        ]},
-        doc: { title: "Documento (Office, PDF)", color: "#00a8ff", steps: [
-            { text: "Macros VBA", tool: "olevba", cmd: "olevba arquivo_suspeito.docm" },
-            { text: "Template Injection", tool: "Unzip", cmd: "unzip -p documento.docx word/_rels/settings.xml.rels" },
-            { text: "PDF Javascript", tool: "pdf-parser", cmd: "pdf-parser.py -s javascript arquivo.pdf" }
-        ]},
-        email: { title: "E-mail / Phishing", color: "#7f8fa6", steps: [
-            { text: "Headers (Source IP)", tool: "MXToolbox", cmd: "Busque o X-Originating-IP" },
-            { text: "Anexos (Hash)", tool: "Get-FileHash", cmd: "SHA256 do anexo antes de abrir" },
-            { text: "Links (Sandbox)", tool: "URLScan", cmd: "Copie o link para urlscan.io" }
-        ]}
-    };
-
-    // --- FUNÇÕES CORE ---
-
-    // 1. ADICIONAR CARD
-    function addCard(type) {
-        document.getElementById('emptyMsg').style.display = 'none';
-        
-        const data = database[type];
-        const container = document.getElementById('timelineContainer');
-        const uniqueId = 'card-' + Date.now(); // ID único baseado em timestamp
-
-        // Gera HTML dos Checks
-        let stepsHtml = '';
-        data.steps.forEach(step => {
-            stepsHtml += `
-                <div class="checklist-item">
-                    <input type="checkbox" onchange="updateReport()">
-                    <div style="width: 100%;">
-                        <span class="tool-tag">${step.tool}</span>
-                        <strong>${step.text}</strong>
-                        <div class="cmd-box">$ ${step.cmd}</div>
-                    </div>
-                </div>`;
-        });
-
-        // Gera HTML do Card Completo
-        const card = document.createElement('div');
-        card.className = 'investigation-card';
-        card.id = uniqueId;
-        card.setAttribute('data-title', data.title); // Para recuperar no relatório
-
-        card.innerHTML = `
-            <div class="card-header" style="border-left: 5px solid ${data.color}">
-                <div>
-                    <span class="step-badge" style="color: ${data.color}">STEP ?</span>
-                    <span style="font-weight: bold; color: #fff;">${data.title}</span>
-                </div>
-                <div class="card-actions">
-                    <button class="card-btn" onclick="moveCard('${uniqueId}', -1)" title="Mover pra Cima">▲</button>
-                    <button class="card-btn" onclick="moveCard('${uniqueId}', 1)" title="Mover pra Baixo">▼</button>
-                    <button class="card-btn btn-close" onclick="removeCard('${uniqueId}')" title="Remover">×</button>
-                </div>
-            </div>
-            <div class="card-body">
-                ${stepsHtml}
-                <div class="custom-evidence-area">
-                    <textarea class="custom-input" placeholder=">> Adicionar evidência personalizada ou comandos extras aqui..." oninput="updateReport()"></textarea>
-                </div>
-            </div>
-        `;
-
-        container.appendChild(card);
-        updateStepNumbers(); // Recalcula números
-        updateReport();
-        
-        // Scroll suave para o novo card
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    // 2. REMOVER CARD
-    function removeCard(id) {
-        const card = document.getElementById(id);
-        if(card) {
-            card.remove();
-            updateStepNumbers();
-            updateReport();
-        }
-        
-        if(document.getElementById('timelineContainer').children.length <= 1) {
-            document.getElementById('emptyMsg').style.display = 'block';
-        }
-    }
-
-    // 3. MOVER CARD (REORDENAR)
-    function moveCard(id, direction) {
-        const card = document.getElementById(id);
-        const container = document.getElementById('timelineContainer');
-        const siblings = Array.from(container.getElementsByClassName('investigation-card'));
-        const index = siblings.indexOf(card);
-
-        if (direction === -1 && index > 0) {
-            // Mover para cima
-            container.insertBefore(card, siblings[index - 1]);
-        } else if (direction === 1 && index < siblings.length - 1) {
-            // Mover para baixo
-            container.insertBefore(card, siblings[index + 1].nextSibling);
-        }
-        updateStepNumbers();
-        updateReport();
-    }
-
-    // 4. ATUALIZAR NÚMEROS DOS STEPS
-    function updateStepNumbers() {
-        const cards = document.getElementsByClassName('investigation-card');
-        document.getElementById('stepCounterDisplay').innerText = `${cards.length} Etapas`;
-        
-        Array.from(cards).forEach((card, index) => {
-            const badge = card.querySelector('.step-badge');
-            badge.innerText = `STEP ${index + 1}`;
-        });
-    }
-
-    // 5. RESET TOTAL
-    function resetAll() {
-        if(confirm("Tem certeza? Isso apagará todo o relatório atual.")) {
-            const container = document.getElementById('timelineContainer');
-            // Remove todos os cards, mantendo apenas a msg vazia (se ela estiver escondida)
-            const cards = container.querySelectorAll('.investigation-card');
-            cards.forEach(c => c.remove());
-            
-            document.getElementById('emptyMsg').style.display = 'block';
-            updateReport();
-            updateStepNumbers();
-        }
-    }
-
-    // 6. GERAR RELATÓRIO TEXTO
-    function updateReport() {
-        const cards = document.getElementsByClassName('investigation-card');
-        let report = `=== RELATÓRIO DE CADEIA DE ATAQUE (KILL CHAIN) ===\n`;
-        report += `Data: ${new Date().toLocaleString()}\n`;
-        report += `Etapas Analisadas: ${cards.length}\n\n`;
-
-        for (let card of cards) {
-            const stepName = card.querySelector('.step-badge').innerText;
-            const title = card.getAttribute('data-title');
-            
-            report += `----------------------------------------\n`;
-            report += `[ ${stepName} ] : ${title}\n`;
-            report += `----------------------------------------\n`;
-
-            // Checkboxes
-            const items = card.querySelectorAll('.checklist-item');
-            let hasAction = false;
-
-            items.forEach(item => {
-                const checkbox = item.querySelector('input');
-                const text = item.querySelector('strong').innerText;
-                const cmd = item.querySelector('.cmd-box').innerText.replace('$ ', '');
-
-                if (checkbox.checked) {
-                    hasAction = true;
-                    item.classList.add('checked');
-                    report += `[x] ${text}\n    Ref: ${cmd}\n`;
-                } else {
-                    item.classList.remove('checked');
-                }
-            });
-
-            // Custom Evidence
-            const customText = card.querySelector('.custom-input').value.trim();
-            if(customText) {
-                hasAction = true;
-                report += `\n[+] NOTAS ADICIONAIS:\n${customText}\n`;
-            }
-
-            if (!hasAction) report += "(Nenhuma evidência marcada nesta etapa)\n";
-            report += "\n";
-        }
-
-        report += `=== CONCLUSÃO / RECOMENDAÇÕES ===\n`;
-        report += "- Isolar hosts confirmados.\n";
-        report += "- Resetar credenciais envolvidas.\n";
-        report += "- Bloquear IoCs no perímetro.";
-
-        document.getElementById('finalReport').value = report;
-    }
-
-    // 7. EXPORTAR PDF (Feature Nova)
-    function generatePDF() {
-        const reportText = document.getElementById('finalReport').value;
-        if(!reportText.trim()) return alert("O relatório está vazio!");
-
-        // Cria um elemento temporário formatado para PDF (Visual Dark Friendly)
-        const element = document.createElement('div');
-        element.style.padding = '20px';
-        element.style.backgroundColor = '#0f111a'; // Fundo Dark
-        element.style.color = '#aab2c0'; // Texto Claro
-        element.style.fontFamily = 'monospace';
-        element.style.whiteSpace = 'pre-wrap'; // Mantém quebras de linha
-        element.style.fontSize = '12px';
-        
-        // Cabeçalho Bonito no PDF
-        element.innerHTML = `
-            <div style="border-bottom: 2px solid #00ff9d; padding-bottom: 10px; margin-bottom: 20px;">
-                <h1 style="color: #fff; margin:0;">IR Handler Report</h1>
-                <small style="color: #00ff9d;">Gerado em: ${new Date().toLocaleString()}</small>
-            </div>
-            <div>${reportText}</div>
-            <div style="margin-top: 30px; border-top: 1px dashed #333; padding-top: 10px; text-align: center; color: #555;">
-                <small>Generated by IR Handler v1.1 // TLP:AMBER</small>
-            </div>
-        `;
-
-        const opt = {
-            margin:       0.5,
-            filename:     `IR_Report_${Date.now()}.pdf`,
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, backgroundColor: '#0f111a' }, // Garante fundo dark
-            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-        };
-
-        // Usa a lib html2pdf
-        html2pdf().set(opt).from(element).save();
-    }
-
-    function copyReport() {
-        const copyText = document.getElementById("finalReport");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Copiado!");
-    }
-</script>
+<script type="module" src="js/app.js"></script>
 
 </body>
 </html>
