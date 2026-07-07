@@ -6,6 +6,7 @@
     --bg-color: #0a0a0a;        /* Preto profundo (Fundo Principal) */
     --text-color: #d1d5db;      /* Branco suave/Cinza claro para leitura confortável */
     --accent-purple: #b286fd;   /* Roxo vibrante para Títulos e Identidade */
+    --accent-blue: #38bdf8;     /* Azul suave para identidade do Blue Team */
     --accent-link: #ffffff;     /* Branco puro para Links de Navegação */
     --accent-red: #ff4757;      /* Vermelho Red Team para alertas e código */
     --code-bg: #161616;         /* Fundo levemente mais claro para cards e código */
