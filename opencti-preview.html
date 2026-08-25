@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenCTI (Cyber Threat Intell) — Preview | 0xtiltas_ Security Lab</title>
+<meta name="description" content="Galeria de preview do deploy do OpenCTI: dashboard, monitoramento de conectores, indicadores, vulnerabilidades e setores.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+
+<header>
+    <h1>0xtiltas_ Security Lab</h1>
+    <p>Red Team // Blue Team // Malware Analysis</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre</a>
+    </nav>
+</header>
+
+<main>
+    <a class="preview-back" href="projetos.html">&larr; Voltar para Projetos</a>
+
+    <h2>OpenCTI (Cyber Threat Intell)</h2>
+
+    <div class="preview-meta">
+        <span class="preview-tag">Blue Team</span>
+        <span class="preview-tag">Open Source</span>
+        <span class="preview-tag">STIX 2.1</span>
+    </div>
+
+    <p>
+        Preview do deploy da plataforma <strong>OpenCTI</strong>, usada para centralizar,
+        correlacionar e contextualizar informações sobre ameaças. As telas abaixo mostram
+        o fluxo de trabalho real: visão geral do dashboard, monitoramento de conectores de
+        ingestão, base de indicadores, catálogo de vulnerabilidades e a taxonomia de setores
+        usada para mapear vítimas.
+    </p>
+    <p>
+        Clique em qualquer imagem para abrir em tamanho maior.
+    </p>
+
+    <div class="gallery-grid" id="gallery">
+
+        <button type="button" class="gallery-item" data-index="0">
+            <img src="assets/img/opencti/01-dashboard.png" alt="Dashboard geral do OpenCTI com indicadores, malwares e mapa de países mais visados" loading="lazy">
+            <span class="gallery-caption">
+                <span class="g-title">Dashboard geral</span>
+                <span class="g-desc">Indicadores, malwares e relatórios ativos, ameaças mais recorrentes e mapa de países mais visados nos últimos 3 meses.</span>
+            </span>
+        </button>
+
+        <button type="button" class="gallery-item" data-index="1">
+            <img src="assets/img/opencti/02-monitoring.png" alt="Tela de monitoramento de ingestão do OpenCTI com conectores registrados" loading="lazy">
+            <span class="gallery-caption">
+                <span class="g-title">Ingestion Monitoring</span>
+                <span class="g-desc">Conectores registrados (feeds, enrichment, import/export), status de cada um e volume de leitura/escrita em tempo real.</span>
+            </span>
+        </button>
+
+        <button type="button" class="gallery-item" data-index="2">
+            <img src="assets/img/opencti/03-indicators.png" alt="Listagem de indicadores STIX no OpenCTI" loading="lazy">
+            <span class="gallery-caption">
+                <span class="g-title">Indicators</span>
+                <span class="g-desc">Base de indicadores em formato STIX, com filtros por pattern type e observable type — mais de 870K registros.</span>
+            </span>
+        </button>
+
+        <button type="button" class="gallery-item" data-index="3">
+            <img src="assets/img/opencti/04-vulnerabilities.png" alt="Catálogo de vulnerabilidades (CVEs) no OpenCTI" loading="lazy">
+            <span class="gallery-caption">
+                <span class="g-title">Vulnerabilities</span>
+                <span class="g-desc">Catálogo de CVEs cadastradas, com severidade CVSS3, datas de criação e última atualização.</span>
+            </span>
+        </button>
+
+        <button type="button" class="gallery-item" data-index="4">
+            <img src="assets/img/opencti/05-sectors.png" alt="Listagem de setores cadastrados no OpenCTI" loading="lazy">
+            <span class="gallery-caption">
+                <span class="g-title">Sectors</span>
+                <span class="g-desc">Taxonomia de setores usada para classificar e mapear vítimas e organizações-alvo.</span>
+            </span>
+        </button>
+
+    </div>
+</main>
+
+<footer>
+    <p>0xtiltas_ Security Lab — Todos os direitos reservados.</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">&#8592;</button>
+    <figure class="lightbox-figure">
+        <img id="lightboxImg" src="" alt="">
+        <figcaption><strong id="lightboxTitle"></strong> — <span id="lightboxDesc"></span></figcaption>
+    </figure>
+    <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Próximo">&#8594;</button>
+</div>
+
+<script>
+(function () {
+    var items = Array.from(document.querySelectorAll('.gallery-item'));
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+    var lightboxTitle = document.getElementById('lightboxTitle');
+    var lightboxDesc = document.getElementById('lightboxDesc');
+    var current = 0;
+
+    function openLightbox(index) {
+        current = index;
+        var item = items[current];
+        var img = item.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxTitle.textContent = item.querySelector('.g-title').textContent;
+        lightboxDesc.textContent = item.querySelector('.g-desc').textContent;
+        lightbox.classList.add('is-open');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('is-open');
+    }
+
+    function showNext() {
+        openLightbox((current + 1) % items.length);
+    }
+
+    function showPrev() {
+        openLightbox((current - 1 + items.length) % items.length);
+    }
+
+    items.forEach(function (item, index) {
+        item.addEventListener('click', function () { openLightbox(index); });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxNext').addEventListener('click', showNext);
+    document.getElementById('lightboxPrev').addEventListener('click', showPrev);
+
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+    });
+})();
+</script>
+
+</body>
+</html>

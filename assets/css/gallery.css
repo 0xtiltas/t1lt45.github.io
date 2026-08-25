@@ -1,0 +1,160 @@
+/* ============================================================
+   0xtiltas_ Security Lab - Gallery / Preview Module
+   Usa as mesmas custom properties do style.css principal.
+   Carregar DEPOIS de style.css.
+   ============================================================ */
+
+/* --- Cabeçalho da página de preview --- */
+.preview-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 0.95em;
+}
+.preview-back:hover { color: var(--accent-red); }
+
+.preview-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 30px 0;
+}
+.preview-tag {
+    font-family: "Cascadia Code", "Fira Code", monospace;
+    font-size: 0.8em;
+    color: var(--accent-blue);
+    border: 1px solid var(--border-color);
+    background: var(--code-bg);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* --- Grid da galeria --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+    margin: 30px 0 10px 0;
+}
+
+.gallery-item {
+    background: var(--code-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: border-color 0.2s ease-in-out, transform 0.15s ease-in-out;
+    padding: 0;
+}
+
+.gallery-item:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.gallery-item img {
+    /* sobrescreve a regra global "img { opacity: 0.9 }" pra thumbs ficarem nítidas */
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+    opacity: 1;
+}
+
+.gallery-caption {
+    padding: 12px 14px 14px 14px;
+}
+
+.gallery-caption .g-title {
+    display: block;
+    color: var(--accent-purple);
+    font-weight: 600;
+    font-size: 0.98em;
+    margin-bottom: 4px;
+}
+
+.gallery-caption .g-desc {
+    display: block;
+    color: #9ca3af;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+/* --- Lightbox --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.92);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.lightbox.is-open {
+    display: flex;
+}
+
+.lightbox-figure {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+.lightbox-figure img {
+    max-width: 100%;
+    max-height: 78vh;
+    border: 1px solid var(--accent-purple);
+    border-radius: 4px;
+    opacity: 1;
+    margin: 0 auto;
+}
+
+.lightbox-figure figcaption {
+    color: var(--text-color);
+    margin-top: 14px;
+    font-size: 0.95em;
+}
+
+.lightbox-figure figcaption strong {
+    color: var(--accent-purple);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+    background: var(--code-bg);
+    border: 1px solid var(--border-color);
+    color: var(--accent-link);
+    font-family: "Cascadia Code", "Fira Code", monospace;
+    font-size: 1.4em;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 14px;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+.lightbox-close { top: 24px; right: 24px; }
+.lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 600px) {
+    .lightbox-prev, .lightbox-next { padding: 6px 10px; font-size: 1.1em; }
+    .gallery-item img { height: 160px; }
+}
